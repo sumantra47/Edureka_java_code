@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-configuration PUBLIC
+  "-//Hibernate/Hibernate Configuration DTD 3.0//EN"
+  "http://www.hibernate.org/dtd/hibernate-configuration-3.0.dtd">
+<hibernate-configuration>
+	<session-factory>
+		<property name="hibernate.connection.driver_class">oracle.jdbc.driver.OracleDriver</property>
+		<property name="hibernate.connection.url">jdbc:oracle:thin:@localhost:1521:XE</property>
+		<property name="hibernate.connection.username">devuser</property>
+		<property name="connection.password">pwd</property>
+		<property name="hibernate.jdbc.batch_size">50</property>
+		<property name="connection.pool_size">1</property>
+		<property name="hibernate.dialect">org.hibernate.dialect.Oracle10gDialect</property>
+		<property name="show_sql">true</property>
+		<property name="hibernate.hbm2ddl.auto">update</property>
+		<!-- Second level cache implementation -->
+
+		<!-- <property name="hibernate.cache.use_secondlevel_cache">true</property>
+		<property name="cache.provider_class">org.hibernate.cache.EhCacheProvider</property>
+		<property name="hibernate.cache.region.factory_class">org.hibernate.cache.ehcache.SingletonEhCacheRegionFactory</property>
+
+		Query level cache
+		<property name="hibernate.cache.use_query_cache ">true</property>
+		 -->
+		<!--<mapping resource="coedureka/employee.hbm.xml" /> -->
+		<mapping class="hibernateapplication.Student" />
+	</session-factory>
+</hibernate-configuration>

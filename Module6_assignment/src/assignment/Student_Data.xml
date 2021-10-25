@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<students_data>
+	<student stud_id="1001">
+		<stud_name>Sumantra</stud_name>
+			<name_last>Bhattacharya</name_last>
+		<stud_std>4</stud_std>
+		<stud_gender>M</stud_gender>
+		<stud_marks>656</stud_marks>
+		<stud_address>kolkata-700029</stud_address>
+	</student>
+	<student stud_id="1002">
+		<stud_name>Arunima</stud_name>
+			<name_last>Ray</name_last>
+		<stud_std>2</stud_std>
+		<stud_gender>F</stud_gender>
+		<stud_marks>756</stud_marks>
+		<stud_address>kolkata-700027</stud_address>
+	</student>
+</students_data>

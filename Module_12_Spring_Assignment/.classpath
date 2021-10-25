@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<classpath>
+	<classpathentry kind="src" path="src"/>
+	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER/org.eclipse.jdt.internal.debug.ui.launcher.StandardVMType/JavaSE-1.7"/>
+	<classpathentry kind="lib" path="C:/development/level-2/JDBC_Programs/com.mysql.jdbc_5.1.5.jar"/>
+	<classpathentry kind="lib" path="C:/development/level-3/downloads/springs/jars/antlr-2.7.6.jar"/>
+	<classpathentry kind="lib" path="C:/development/level-3/downloads/springs/jars/asm-3.1.jar"/>
+	<classpathentry kind="lib" path="C:/development/level-3/downloads/springs/jars/c3p0-0.9.1.jar"/>
+	<classpathentry kind="lib" path="C:/development/level-3/downloads/springs/jars/cglib-2.2.jar"/>
+	<classpathentry kind="lib" path="C:/development/level-3/downloads/springs/jars/commons-collections-3.1.jar"/>
+	<classpathentry kind="lib" path="C:/development/level-3/downloads/springs/jars/dom4j-1.6.1.jar"/>
+	<classpathentry kind="lib" path="C:/development/level-3/downloads/springs/jars/hibernate3.jar"/>
+	<classpathentry kind="lib" path="C:/development/level-3/downloads/springs/jars/hibernate-jpa-2.0-api-1.0.0.Final.jar"/>
+	<classpathentry kind="lib" path="C:/development/level-3/downloads/springs/jars/infinispan-core-4.2.1.CR1.jar"/>
+	<classpathentry kind="lib" path="C:/development/level-3/downloads/springs/jars/javassist-3.12.0.GA.jar"/>
+	<classpathentry kind="lib" path="C:/development/level-3/downloads/springs/jars/jbosscache-core-3.2.1.GA.jar"/>
+	<classpathentry kind="lib" path="C:/development/level-3/downloads/springs/jars/jta-1.1.jar"/>
+	<classpathentry kind="lib" path="C:/development/level-3/downloads/springs/jars/ojdbc14.jar"/>
+	<classpathentry kind="lib" path="C:/development/level-3/downloads/springs/jars/org.apache.commons.dbcp.jar"/>
+	<classpathentry kind="lib" path="C:/development/level-3/downloads/springs/jars/org.apache.commons.pool.jar"/>
+	<classpathentry kind="lib" path="C:/development/level-3/downloads/springs/jars/org.springframework.jdbc-3.0.0.M2.jar"/>
+	<classpathentry kind="lib" path="C:/development/level-3/downloads/springs/jars/org.springframework.web.servlet-3.0.0.M3.jar"/>
+	<classpathentry kind="lib" path="C:/development/level-3/downloads/springs/jars/org.springframework.web.servlet-3.1.0.M2.jar"/>
+	<classpathentry kind="lib" path="C:/development/level-3/downloads/springs/jars/org-apache-commons-logging.jar"/>
+	<classpathentry kind="lib" path="C:/development/level-3/downloads/springs/jars/oscache-2.1.jar"/>
+	<classpathentry kind="lib" path="C:/development/level-3/downloads/springs/jars/proxool-0.8.3.jar"/>
+	<classpathentry kind="lib" path="C:/development/level-3/downloads/springs/jars/slf4j-api-1.6.1.jar"/>
+	<classpathentry kind="lib" path="C:/development/level-3/downloads/springs/jars/spring-2.5.6.jar"/>
+	<classpathentry kind="lib" path="C:/development/level-3/downloads/springs/jars/spring-asm-3.0.3.RELEASE.jar"/>
+	<classpathentry kind="lib" path="C:/development/level-3/downloads/springs/jars/spring-jdbc.jar"/>
+	<classpathentry kind="lib" path="C:/development/level-3/downloads/springs/jars/swarmcache-1.0RC2.jar"/>
+	<classpathentry kind="output" path="bin"/>
+</classpath>

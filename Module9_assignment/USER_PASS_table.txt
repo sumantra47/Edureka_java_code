@@ -1,0 +1,11 @@
+CREATE TABLE USER_PASS
+(userID VARCHAR(20),
+password varchar(20) NOT NULL,
+CONSTRAINT user_pk PRIMARY KEY (userID)
+);
+
+insert into USER_PASS values('admin','password');
+insert into USER_PASS values('sumantra','suman1');
+insert into USER_PASS values('rahul','rahul1');
+insert into USER_PASS values('hari','hari1');
+insert into USER_PASS values('kavita','kavita1');

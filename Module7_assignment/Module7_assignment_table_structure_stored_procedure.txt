@@ -1,0 +1,23 @@
+CREATE TABLE STUDENT
+(studentId VARCHAR(10),
+studentName varchar(30) NOT NULL,
+studentClass NUMBER(3,0),
+studentMark NUMBER(4,2),
+CONSTRAINT student_pk PRIMARY KEY (studentId)
+);
+
+
+/*CREATE Stored procedure*/
+CREATE OR REPLACE PROCEDURE  upd_marks(id IN VARCHAR , updated_mark OUT  NUMBER )
+AS BEGIN 
+	UPDATE STUDENT SET STUDENTMARK = STUDENTMARK/100 WHERE STUDENTID  = id;
+	SELECT STUDENTMARK INTO updated_mark FROM STUDENT WHERE STUDENTID = id;
+END;
+/*Execute stored procedure*/
+DECLARE updated_mark NUMBER(4,2);
+BEGIN
+	upd_marks('S002', updated_mark );
+	DBMS_OUTPUT.PUT_LINE('Updated mark : ' || updated_mark );
+END;
+
+SELECT * FROM STUDENT;

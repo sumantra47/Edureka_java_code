@@ -1,0 +1,47 @@
+<!-- Use this file to deploy some handlers/chains and services      -->
+<!-- Two ways to do this:                                           -->
+<!--   java org.apache.axis.client.AdminClient deploy.wsdd          -->
+<!--      after the axis server is running                          -->
+<!-- or                                                             -->
+<!--   java org.apache.axis.utils.Admin client|server deploy.wsdd   -->
+<!--      from the same directory that the Axis engine runs         -->
+
+<deployment
+    xmlns="http://xml.apache.org/axis/wsdd/"
+    xmlns:java="http://xml.apache.org/axis/wsdd/providers/java">
+
+  <!-- Services from StudentDaoImplService WSDL service -->
+
+  <service name="StudentDaoImpl" provider="java:RPC" style="wrapped" use="literal">
+      <parameter name="wsdlTargetNamespace" value="http://dao.soap.spring.com"/>
+      <parameter name="wsdlServiceElement" value="StudentDaoImplService"/>
+      <parameter name="schemaQualified" value="http://model.soap.spring.com,http://dao.soap.spring.com"/>
+      <parameter name="wsdlServicePort" value="StudentDaoImpl"/>
+      <parameter name="className" value="com.spring.soap.dao.StudentDaoImplSoapBindingImpl"/>
+      <parameter name="wsdlPortType" value="StudentDaoImpl"/>
+      <parameter name="typeMappingVersion" value="1.2"/>
+      <operation name="deleteStudent" qname="operNS:deleteStudent" xmlns:operNS="http://dao.soap.spring.com" soapAction="" >
+        <parameter qname="pns:id" xmlns:pns="http://dao.soap.spring.com" type="tns:int" xmlns:tns="http://www.w3.org/2001/XMLSchema"/>
+      </operation>
+      <operation name="addStudent" qname="operNS:addStudent" xmlns:operNS="http://dao.soap.spring.com" soapAction="" >
+        <parameter qname="pns:s1" xmlns:pns="http://dao.soap.spring.com" type="tns:Student" xmlns:tns="http://model.soap.spring.com"/>
+      </operation>
+      <operation name="updateStudentname" qname="operNS:updateStudentname" xmlns:operNS="http://dao.soap.spring.com" soapAction="" >
+        <parameter qname="pns:id" xmlns:pns="http://dao.soap.spring.com" type="tns:int" xmlns:tns="http://www.w3.org/2001/XMLSchema"/>
+        <parameter qname="pns:name" xmlns:pns="http://dao.soap.spring.com" type="tns:string" xmlns:tns="http://www.w3.org/2001/XMLSchema"/>
+      </operation>
+      <operation name="getStudentbyId" qname="operNS:getStudentbyId" xmlns:operNS="http://dao.soap.spring.com" returnQName="retNS:getStudentbyIdReturn" xmlns:retNS="http://dao.soap.spring.com" returnType="rtns:Student" xmlns:rtns="http://model.soap.spring.com" soapAction="" >
+        <parameter qname="pns:id" xmlns:pns="http://dao.soap.spring.com" type="tns:int" xmlns:tns="http://www.w3.org/2001/XMLSchema"/>
+      </operation>
+      <parameter name="allowedMethods" value="addStudent getStudentbyId deleteStudent updateStudentname"/>
+
+      <typeMapping
+        xmlns:ns="http://model.soap.spring.com"
+        qname="ns:Student"
+        type="java:com.spring.soap.model.Student"
+        serializer="org.apache.axis.encoding.ser.BeanSerializerFactory"
+        deserializer="org.apache.axis.encoding.ser.BeanDeserializerFactory"
+        encodingStyle=""
+      />
+  </service>
+</deployment>
